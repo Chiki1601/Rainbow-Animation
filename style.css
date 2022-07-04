@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit:400,800");
+body {
+  position: relative;
+  height: 100vh;
+  font-family: "Kanit", sans-serif;
+}
+
+.rainbow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  width: 100%;
+  max-width: 500px;
+}
+.rainbow:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.rainbow:before {
+  z-index: 9999;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: white;
+}
+.rainbow div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(0) translate(-50%, -50%);
+  transform-origin: 0% 0%;
+  height: 100%;
+  border-radius: 50%;
+}
+.rainbow div:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.rainbow div.red {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 100%, #ff7c1f 60%, #e3000b 70%);
+  animation: rise 5s ease-in-out infinite;
+}
+.rainbow div.orange {
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle at 100%, #ffe937 60%, #ff7c1f 70%);
+  animation: rise 5s 0.1s infinite;
+}
+.rainbow div.yellow {
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle at 100%, #24a703 60%, #ffe937 70%);
+  animation: rise 5s 0.2s infinite;
+}
+.rainbow div.green {
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(circle at 100%, #1c41f7 55%, #24a703 65%);
+  animation: rise 5s 0.3s infinite;
+}
+.rainbow div.blue {
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle at 100%, #690477 55%, #1c41f7 65%);
+  animation: rise 5s 0.4s infinite;
+}
+.rainbow div.purple {
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle at 100%, #ffffff 50%, #690477 60%);
+  animation: rise 5s 0.5s infinite;
+}
+.rainbow div.white {
+  width: 40%;
+  height: 40%;
+  background: #fff;
+}
+.rainbow h1 {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -101%);
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 95px;
+  letter-spacing: 0.1rem;
+  background: linear-gradient(to right, #e3000b, #ff7c1f, #ffe937, #24a703, #1c41f7, #690477);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes rise {
+  0% {
+    transform: rotate(0) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
